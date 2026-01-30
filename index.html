@@ -1,1 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranjith H S - Data Analyst Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header/Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 100px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+        }
+        
+        .hero .buttons {
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin: 10px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+        }
+        
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #667eea;
+        }
+        
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .skill-card {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .skill-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-color: #667eea;
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+        
+        .project-card .tech-stack {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .experience-item {
+            background: #f8f9fa;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .experience-item h3 {
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .company {
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .experience-item .date {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #f8f9fa;
+            text-align: center;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .contact-links a:hover {
+            background: #764ba2;
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            
+            .hero p {
+                font-size: 1.1em;
+            }
+            
+            section h2 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>👋 Hi, I'm Ranjith H S</h1>
+            <p>Data Analyst | Business Intelligence | Sales & Commercial Analytics</p>
+            <p style="font-size: 1.1em;">Transforming complex data into actionable insights that drive business performance</p>
+            <div class="buttons">
+                <a href="#projects" class="btn">View Projects</a>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>I'm a Data Analyst with <strong>3+ years of experience</strong> transforming raw data into strategic insights across sales operations, marketing analytics, and business intelligence.</p>
+                <br>
+                <p>With an <strong>MSc in Business Intelligence & Business Analytics from EDHEC Business School</strong>, I specialize in building analytical frameworks, automated dashboards, and data-driven solutions that support cross-functional decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>📊 Data Analytics</h3>
+                    <p>Performance analysis, forecasting & demand planning, trend identification, competitive intelligence</p>
+                </div>
+                <div class="skill-card">
+                    <h3>💻 Programming</h3>
+                    <p>Python, SQL, Excel (Advanced), Data cleaning & transformation</p>
+                </div>
+                <div class="skill-card">
+                    <h3>📈 Visualization</h3>
+                    <p>Power BI, Tableau, Dashboard development, KPI tracking</p>
+                </div>
+                <div class="skill-card">
+                    <h3>🎯 Business Tools</h3>
+                    <p>SAP, Nielsen IQ, Google Sheets, SIOP Process, Agile methodologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🥤 Automated Competitor Intelligence Dashboard</h3>
+                    <p>Designed Nielsen-powered analytics system monitoring energy drink market dynamics, sales velocity, and promotional ROI.</p>
+                    <p><strong>Impact:</strong> Reduced analysis cycle time by 45%</p>
+                    <div class="tech-stack"><strong>Tech:</strong> Power BI, Nielsen IQ, Market Analytics</div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🎮 Pokemon Go User Engagement Research</h3>
+                    <p>Applied quantitative analysis to investigate player behavior patterns and engagement drivers using gameplay metrics.</p>
+                    <p><strong>Impact:</strong> Extracted actionable insights on user retention</p>
+                    <div class="tech-stack"><strong>Tech:</strong> Python, Statistical Analysis, Research Design</div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🎬 Netflix Content Intelligence Analysis</h3>
+                    <p>Conducted exploratory data analysis to uncover genre trends, rating patterns, and global market opportunities.</p>
+                    <p><strong>Impact:</strong> Identified content strategy opportunities</p>
+                    <div class="tech-stack"><strong>Tech:</strong> Tableau, Exploratory Data Analysis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" style="background: #f8f9fa;">
+        <div class="container">
+            <h2>Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <h3>Trade Marketing & Category Management Assistant</h3>
+                    <div class="company">Suntory Beverage & Food | Brussels, Belgium</div>
+                    <div class="date">Sep 2025 - Dec 2025</div>
+                    <p>Built automated competitor tracking dashboard and developed retailer-specific category strategies</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Data Analyst – Sales Operations</h3>
+                    <div class="company">YG-1 India | Bengaluru, India</div>
+                    <div class="date">Dec 2022 - Apr 2024</div>
+                    <p>Improved forecast accuracy by 18% and reduced reporting cycle time by 20% through automation</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Data Analyst – Sales Operations & Reporting</h3>
+                    <div class="company">Fortune Spirits | Bengaluru, India (Freelance)</div>
+                    <div class="date">Apr 2022 - Nov 2022</div>
+                    <p>Accelerated decision-making by 25% and improved marketing ROI by 15%</p>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Management Trainee</h3>
+                    <div class="company">Kotak Life Insurance | Bengaluru, India</div>
+                    <div class="date">Sep 2021 - Apr 2022</div>
+                    <p>Drove 12% conversion improvement through data-driven territory planning</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Let's Connect</h2>
+            <p style="font-size: 1.2em; margin-bottom: 20px;">I'm passionate about leveraging data analytics to solve business problems and drive operational excellence.</p>
+            <p style="margin-bottom: 30px;"><strong>Open to opportunities in:</strong> Data Analyst | Business Intelligence | Commercial Analytics</p>
+            <div class="contact-links">
+                <a href="mailto:ranjith.hadripurasureshkumar@edhec.com">📧 Email Me</a>
+                <a href="https://linkedin.com/in/ranjith-h-s" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/RanjithSureshkumar" target="_blank">💻 GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ranjith H S. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9em;">📍 Based in Paris, France | Open to relocation within Europe</p>
+    </footer>
+</body>
+</html>
